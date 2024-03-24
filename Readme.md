@@ -5,8 +5,8 @@ Welcome to the Variational Autoencoder (VAE) repository! This repository is part
 ## What is a Variational Autoencoder (VAE)?
 
 Variational Autoencoder (VAE) is a type of artificial neural network used in unsupervised learning and generative modeling tasks. It belongs to the broader family of autoencoder neural networks. The key idea behind VAE is to learn a low-dimensional representation of input data in an unsupervised manner while simultaneously learning the data distribution.
+![\[Insert Image Here\]](https://miro.medium.com/v2/resize:fit:1400/1*kXiln_TbF15oVg7AjcUEkQ.png)
 
-![VAEs](ConvVAE/outputs/generated_images.gif)
 
 ## How does a VAE work?
 
@@ -50,7 +50,7 @@ Once trained, the VAE can generate new data points by sampling from the distribu
     ```bash
     python evaluate.py --num_samples 10
     ```
-
+![VAEs](ConvVAE/outputs/generated_images.gif)
 ## References:
 
 - Kingma, D. P., & Welling, M. (2013). Auto-Encoding Variational Bayes. arXiv preprint arXiv:1312.6114.
