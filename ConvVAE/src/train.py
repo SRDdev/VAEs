@@ -1,3 +1,4 @@
+# This code is contributed by Shreyas Dixit under the Paper Replication series
 import torch
 import torch.optim as optim
 import torch.nn as nn
@@ -17,14 +18,14 @@ vae_model = ConvVAE().to(device)
 lr = 0.001
 epochs = 10
 batch_size = 64
-optimizer = optim.Adam(vae_model.parameters(), lr=lr,eps=1e-6)
+optimizer = optim.Adam(vae_model.parameters(), lr=lr,eps=1e-2,weight_decay=0)
 criterion = nn.BCELoss(reduction='sum')  
 grid_images = []
 transform = transforms.Compose([transforms.Resize((32, 32)),transforms.ToTensor(),])
 
-trainset = torchvision.datasets.FashionMNIST(root='./input', train=True, download=True, transform=transform)
+trainset = torchvision.datasets.MNIST(root='./input', train=True, download=True, transform=transform)
 trainloader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
-testset = torchvision.datasets.FashionMNIST(root='./input', train=False, download=True, transform=transform)
+testset = torchvision.datasets.MNIST(root='./input', train=False, download=True, transform=transform)
 testloader = DataLoader(testset, batch_size=batch_size, shuffle=False)
 
 train_loss = []

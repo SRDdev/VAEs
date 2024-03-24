@@ -1,3 +1,4 @@
+# This code is contributed by Shreyas Dixit under the Paper Replication series
 import torch
 import matplotlib.pyplot as plt
 from src.Decoder import Decoder

@@ -1,11 +1,12 @@
+# This code is contributed by Shreyas Dixit under the Paper Replication series
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 kernel_size = 4 
-init_channels = 8 
+init_channels = 16 
 image_channels = 1  
-latent_dim = 16  
+latent_dim = 64  
 
 class ConvVAE(nn.Module):
     def __init__(self):
